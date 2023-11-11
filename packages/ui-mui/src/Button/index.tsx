@@ -1,27 +1,18 @@
-import { ButtonTypeMap } from '@mui/material';
+import { ButtonTypeMap, Button as MuiButton } from '@mui/material';
 import { CSSProperties, ReactNode } from 'react';
 
-import { ButtonStyled } from './styled';
-
-export type ButtonProps = {
+export interface Props {
   children: ReactNode;
   isDisabled?: boolean;
   size?: ButtonTypeMap['props']['size'];
   bgColor?: CSSProperties['backgroundColor'];
   onClick: () => void;
-};
+}
 
-export const Button = ({ children, isDisabled, size, bgColor, onClick }: ButtonProps) => {
+export const Button = ({ children, isDisabled, size, onClick }: Props) => {
   return (
-    <ButtonStyled
-      variant="contained"
-      disabled={isDisabled}
-      isDisabled={isDisabled}
-      size={size}
-      bgColor={bgColor}
-      onClick={onClick}
-    >
+    <MuiButton variant="contained" disabled={isDisabled} size={size} onClick={onClick}>
       {children}
-    </ButtonStyled>
+    </MuiButton>
   );
 };

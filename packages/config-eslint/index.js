@@ -27,13 +27,11 @@ module.exports = {
     'storybook/no-title-property-in-meta': 'error',
 
     'prefer-template': 'error',
-    'no-nested-ternary': 'error',
     'no-unneeded-ternary': 'error',
     'spaced-comment': 'error',
-    'id-length': ['error', { min: 2, properties: 'never' }],
 
     '@typescript-eslint/ban-ts-comment': ['error', { 'ts-expect-error': 'allow-with-description' }],
-    '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/array-type': ['error', { default: 'generic' }],
     '@typescript-eslint/ban-types': 'error',
     '@typescript-eslint/prefer-nullish-coalescing': 'error',
@@ -51,7 +49,6 @@ module.exports = {
       },
     ],
 
-    'import/no-default-export': 'error',
     'import/order': [
       'error',
       {
